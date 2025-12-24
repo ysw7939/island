@@ -18,7 +18,7 @@ public class CmdCounts implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("counts", "blocks");
+        return Arrays.asList("counts", "블록수", "blocks");
     }
 
     @Override

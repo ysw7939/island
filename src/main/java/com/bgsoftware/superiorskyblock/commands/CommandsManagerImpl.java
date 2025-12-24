@@ -71,6 +71,11 @@ public class CommandsManagerImpl extends Manager implements CommandsManager {
 
         plugin.getNMSAlgorithms().registerCommand(pluginCommand);
 
+        // Register Korean command
+        PluginCommand koreanCommand = new PluginCommand("섬");
+        koreanCommand.setDescription("SuperiorSkyblock's main command (Korean)");
+        plugin.getNMSAlgorithms().registerCommand(koreanCommand);
+
         playerCommandsMap.loadDefaultCommands();
         adminCommandsMap.loadDefaultCommands();
 

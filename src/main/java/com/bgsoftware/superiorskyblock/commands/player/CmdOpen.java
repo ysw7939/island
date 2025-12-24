@@ -16,7 +16,7 @@ public class CmdOpen implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("open", "unlock");
+        return Arrays.asList("open", "열기", "unlock");
     }
 
     @Override

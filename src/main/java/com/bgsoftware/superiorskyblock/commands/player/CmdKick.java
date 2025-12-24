@@ -20,7 +20,7 @@ public class CmdKick implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("kick", "remove");
+        return Arrays.asList("kick", "강퇴", "remove");
     }
 
     @Override

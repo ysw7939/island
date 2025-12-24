@@ -22,7 +22,7 @@ public class CmdSetRole implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("setrole");
+        return java.util.Arrays.asList("setrole", "역할설정");
     }
 
     @Override

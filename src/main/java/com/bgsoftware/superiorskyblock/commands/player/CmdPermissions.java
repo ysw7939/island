@@ -25,7 +25,7 @@ public class CmdPermissions implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("permissions", "perms", "setpermission", "setperm");
+        return Arrays.asList("permissions", "권한", "perms", "setpermission", "setperm");
     }
 
     @Override

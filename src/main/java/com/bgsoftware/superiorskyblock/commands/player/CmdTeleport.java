@@ -20,7 +20,7 @@ public class CmdTeleport implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("teleport", "tp", "go", "home");
+        return Arrays.asList("teleport", "텔레포트", "tp", "go", "home");
     }
 
     @Override

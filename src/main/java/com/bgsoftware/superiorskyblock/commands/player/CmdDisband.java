@@ -22,7 +22,7 @@ public class CmdDisband implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("disband", "reset", "delete");
+        return Arrays.asList("disband", "해체", "reset", "delete");
     }
 
     @Override

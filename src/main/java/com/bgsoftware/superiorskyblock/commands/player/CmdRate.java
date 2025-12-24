@@ -19,7 +19,7 @@ public class CmdRate implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("rate");
+        return java.util.Arrays.asList("rate", "평가");
     }
 
     @Override

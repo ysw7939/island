@@ -20,7 +20,7 @@ public class CmdInvite implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("invite", "add");
+        return Arrays.asList("invite", "초대", "add");
     }
 
     @Override

@@ -19,7 +19,7 @@ public class CmdName implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("name", "setname", "rename");
+        return Arrays.asList("name", "이름", "setname", "rename");
     }
 
     @Override

@@ -20,7 +20,7 @@ public class CmdPardon implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("pardon", "unban");
+        return Arrays.asList("pardon", "사면", "unban");
     }
 
     @Override

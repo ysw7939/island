@@ -26,7 +26,7 @@ public class CmdTeam implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("team", "showteam", "online");
+        return Arrays.asList("team", "팀", "showteam", "online");
     }
 
     @Override

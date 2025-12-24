@@ -18,7 +18,7 @@ public class CmdBans implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("bans", "banlist");
+        return Arrays.asList("bans", "추방목록", "banlist");
     }
 
     @Override

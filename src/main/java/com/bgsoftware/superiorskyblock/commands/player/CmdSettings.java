@@ -18,7 +18,7 @@ public class CmdSettings implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("settings");
+        return java.util.Arrays.asList("settings", "설정");
     }
 
     @Override

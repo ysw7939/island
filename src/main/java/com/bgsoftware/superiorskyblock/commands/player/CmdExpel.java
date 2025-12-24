@@ -22,7 +22,7 @@ public class CmdExpel implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("expel");
+        return java.util.Arrays.asList("expel", "내쫓기");
     }
 
     @Override

@@ -18,7 +18,7 @@ public class CmdToggle implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("toggle");
+        return java.util.Arrays.asList("toggle", "토글");
     }
 
     @Override

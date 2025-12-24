@@ -22,7 +22,7 @@ public class CmdCreate implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("create");
+        return java.util.Arrays.asList("create", "생성");
     }
 
     @Override

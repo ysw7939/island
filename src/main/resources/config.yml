@@ -32,7 +32,7 @@ database:
 # Set the main command of the plugin.
 # You can add aliases by adding "," after the command name, and split them using ",".
 # You must have a full restart in order to apply changes for the command.
-island-command: 'island,is,islands'
+island-command: 'island,is,islands,섬'
 
 # Set the maximum island size. Island distances is 3 times bigger than the max size.
 # Please, do not change it while you have a running islands world!
@@ -819,9 +819,248 @@ island-chests:
 
 # Custom aliases for plugin's commands.
 command-aliases:
-  example-command:
-    - 'Aliase1'
-    - 'Aliase2'
+  accept:
+  - '수락'
+  balance:
+  - '잔액'
+  ban:
+  - '추방'
+  bank:
+  - '은행'
+  bans:
+  - '추방목록'
+  biome:
+  - '생물군계'
+  border:
+  - '경계'
+  chest:
+  - '상자'
+  close:
+  - '닫기'
+  coop:
+  - '협동'
+  coops:
+  - '협동목록'
+  counts:
+  - '블록수'
+  create:
+  - '생성'
+  delwarp:
+  - '워프삭제'
+  demote:
+  - '강등'
+  deposit:
+  - '입금'
+  disband:
+  - '해체'
+  expel:
+  - '내쫓기'
+  fly:
+  - '비행'
+  help:
+  - '도움말'
+  invite:
+  - '초대'
+  kick:
+  - '강퇴'
+  lang:
+  - '언어'
+  leave:
+  - '떠나기'
+  mission:
+  - '임무'
+  missions:
+  - '임무목록'
+  name:
+  - '이름'
+  open:
+  - '열기'
+  panel:
+  - '패널'
+  pardon:
+  - '사면'
+  permissions:
+  - '권한'
+  promote:
+  - '승급'
+  rankup:
+  - '랭크업'
+  rate:
+  - '평가'
+  ratings:
+  - '평가목록'
+  recalc:
+  - '재계산'
+  setdiscord:
+  - '디스코드설정'
+  setpaypal:
+  - '페이팔설정'
+  setrole:
+  - '역할설정'
+  setteleport:
+  - '텔레포트설정'
+  settings:
+  - '설정'
+  setwarp:
+  - '워프설정'
+  show:
+  - '보기'
+  team:
+  - '팀'
+  teamchat:
+  - '팀채팅'
+  teleport:
+  - '텔레포트'
+  toggle:
+  - '토글'
+  top:
+  - '순위'
+  transfer:
+  - '양도'
+  uncoop:
+  - '협동해제'
+  upgrade:
+  - '업그레이드'
+  value:
+  - '가치'
+  values:
+  - '가치목록'
+  visit:
+  - '방문'
+  warp:
+  - '워프'
+  warps:
+  - '워프목록'
+  withdraw:
+  - '출금'
+  admin:
+  - '관리'
+  add:
+  - '추가'
+  addbanklimit:
+  - '은행한도추가'
+  addblocklimit:
+  - '블록한도추가'
+  addbonus:
+  - '보너스추가'
+  addcooplimit:
+  - '협동한도추가'
+  addcropgrowth:
+  - '작물성장추가'
+  addeffect:
+  - '효과추가'
+  addentitylimit:
+  - '엔티티한도추가'
+  addgenerator:
+  - '생성기추가'
+  addmobdrops:
+  - '몹드롭추가'
+  addsize:
+  - '크기추가'
+  addspawnerrates:
+  - '스포너속도추가'
+  addteamlimit:
+  - '팀한도추가'
+  addwarpslimit:
+  - '워프한도추가'
+  bonus:
+  - '보너스'
+  bypass:
+  - '우회'
+  cleargenerator:
+  - '생성기초기화'
+  count:
+  - '수량'
+  givedisbands:
+  - '해체권한부여'
+  ignore:
+  - '무시'
+  join:
+  - '참가'
+  modules:
+  - '모듈'
+  msg:
+  - '메시지'
+  msgall:
+  - '전체메시지'
+  openmenu:
+  - '메뉴열기'
+  purge:
+  - '초기화'
+  reload:
+  - '리로드'
+  removeblocklimit:
+  - '블록한도제거'
+  removeentitylimit:
+  - '엔티티한도제거'
+  removeratings:
+  - '평가제거'
+  resetpermissions:
+  - '권한초기화'
+  resetsettings:
+  - '설정초기화'
+  resetworld:
+  - '월드초기화'
+  schematic:
+  - '회로'
+  setbanklimit:
+  - '은행한도설정'
+  setbiome:
+  - '생물군계설정'
+  setblockamount:
+  - '블록수량설정'
+  setblocklimit:
+  - '블록한도설정'
+  setchestrow:
+  - '상자줄설정'
+  setcooplimit:
+  - '협동한도설정'
+  setcropgrowth:
+  - '작물성장설정'
+  setdisbands:
+  - '해체권한설정'
+  seteffect:
+  - '효과설정'
+  setentitylimit:
+  - '엔티티한도설정'
+  setgenerator:
+  - '생성기설정'
+  setislandpreview:
+  - '섬미리보기설정'
+  setleader:
+  - '리더설정'
+  setmobdrops:
+  - '몹드롭설정'
+  setpermission:
+  - '권한설정'
+  setrate:
+  - '평가설정'
+  setrolelimit:
+  - '역할한도설정'
+  setsize:
+  - '크기설정'
+  setspawn:
+  - '스폰설정'
+  setspawnerrates:
+  - '스포너속도설정'
+  setteamlimit:
+  - '팀한도설정'
+  setupgrade:
+  - '업그레이드설정'
+  setwarpslimit:
+  - '워프한도설정'
+  spawn:
+  - '스폰'
+  spy:
+  - '스파이'
+  stats:
+  - '통계'
+  syncupgrades:
+  - '업그레이드동기화'
+  unignore:
+  - '무시해제'
+  world:
+  - '월드'
 
 # A list of valuable blocks.
 # These blocks require the "VALUABLE_BREAK" permission in order to break them.

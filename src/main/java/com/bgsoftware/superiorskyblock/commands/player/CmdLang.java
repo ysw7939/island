@@ -15,7 +15,7 @@ public class CmdLang implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("lang", "language");
+        return Arrays.asList("lang", "언어", "language");
     }
 
     @Override

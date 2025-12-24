@@ -22,7 +22,7 @@ public class CmdAdminAdd implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("add");
+        return java.util.Arrays.asList("add", "추가");
     }
 
     @Override

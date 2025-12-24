@@ -192,7 +192,7 @@ public class SIsland implements Island {
     private final IslandArea entireArea = new IslandArea();
     private final IslandArea protectedArea = new IslandArea();
     /*
-     * Island Identifiers
+     * 섬 식별자
      */
     private final UUID uuid;
     private final BlockPosition center;
@@ -200,7 +200,7 @@ public class SIsland implements Island {
     @Nullable
     private final String schematicName;
     /*
-     * Island Upgrade Values
+     * 섬 업그레이드 값
      */
     private final Synchronized<IntValue> islandSize = Synchronized.of(IntValue.syncedFixed(-1));
     private final Synchronized<IntValue> warpsLimit = Synchronized.of(IntValue.syncedFixed(-1));
@@ -216,7 +216,7 @@ public class SIsland implements Island {
     private final KeyMap<IntValue> blockLimits = KeyMaps.createConcurrentHashMap(KeyIndicator.MATERIAL);
     private final KeyMap<IntValue> entityLimits = KeyMaps.createConcurrentHashMap(KeyIndicator.ENTITY_TYPE);
     /*
-     * Island Player-Trackers
+     * 섬 플레이어 추적
      */
     private final Synchronized<SortedSet<SuperiorPlayer>> members = Synchronized.of(new TreeSet<>(SortingComparators.PLAYER_NAMES_COMPARATOR));
     private final Synchronized<SortedSet<SuperiorPlayer>> playersInside = Synchronized.of(new TreeSet<>(SortingComparators.PLAYER_NAMES_COMPARATOR));
@@ -227,13 +227,13 @@ public class SIsland implements Island {
     private final Map<SuperiorPlayer, PlayerPrivilegeNode> playerPermissions = new ConcurrentHashMap<>();
     private final Map<UUID, Rating> ratings = new ConcurrentHashMap<>();
     /*
-     * Island Warps
+     * 섬 워프
      */
     private final Map<String, IslandWarp> warpsByName = new ConcurrentHashMap<>();
     private final Synchronized<Location2ObjectMap<IslandWarp>> warpsByLocation = Synchronized.of(new Location2ObjectMap<>());
     private final Map<String, WarpCategory> warpCategories = new ConcurrentHashMap<>();
     /*
-     * General Settings
+     * 일반 설정
      */
     private final Synchronized<EnumerateMap<Dimension, WorldPosition>> islandHomes = Synchronized.of(new EnumerateMap<>(Dimension.values()));
     private final Synchronized<EnumerateMap<Dimension, WorldPosition>> visitorHomes = Synchronized.of(new EnumerateMap<>(Dimension.values()));
@@ -252,7 +252,7 @@ public class SIsland implements Island {
     @Nullable
     private PersistentDataContainer persistentDataContainer;
     /*
-     * Island Flags
+     * 섬 플래그
      */
     private volatile boolean beingRecalculated = false;
     private final AtomicReference<BigInteger> currentTotalBlockCounts = new AtomicReference<>(BigInteger.ZERO);
@@ -260,7 +260,7 @@ public class SIsland implements Island {
     private SuperiorPlayer owner;
     private String creationTimeDate;
     /*
-     * Island Time-Trackers
+     * 섬 시간 추적
      */
     private volatile long lastTimeUpdate;
     private volatile boolean currentlyActive = false;
@@ -341,7 +341,7 @@ public class SIsland implements Island {
         this.entitiesTracker = plugin.getFactory().createIslandEntitiesTrackerAlgorithm(this);
         this.dirtyChunksContainer = new DirtyChunksContainer(this);
 
-        // We make sure the default world is always marked as generated.
+        // 기본 월드는 항상 생성된 것으로 표시되도록 합니다.
         if (!wasSchematicGenerated(plugin.getSettings().getWorlds().getDefaultWorldDimension())) {
             setSchematicGenerate(plugin.getSettings().getWorlds().getDefaultWorldDimension());
         }
@@ -387,7 +387,7 @@ public class SIsland implements Island {
         this.entireArea.update(this.center, islandDistance);
         this.protectedArea.update(this.center, getIslandSize());
 
-        // We want to save all the limits to the custom block keys
+        // 모든 제한을 커스텀 블록 키에 저장하려고 합니다.
         plugin.getBlockValues().addCustomBlockKeys(builder.blockLimits.keySet());
 
         updateDatesFormatter();
@@ -397,7 +397,7 @@ public class SIsland implements Island {
         updateUpgrades();
         updateIslandChests();
 
-        // We can only track entity counts after upgrades are set up
+        // 업그레이드가 설정된 후에만 엔티티 수를 추적할 수 있습니다.
         if (!builder.entityCounts.isEmpty()) {
             builder.entityCounts.forEach((entity, count) -> this.entitiesTracker.trackEntity(entity, count.intValue()));
         }
@@ -430,7 +430,7 @@ public class SIsland implements Island {
     }
 
     /*
-     *  Player related methods
+     *  플레이어 관련 메소드
      */
 
     @Override
@@ -522,7 +522,7 @@ public class SIsland implements Island {
         invitedPlayers.add(superiorPlayer);
         superiorPlayer.addInvite(this);
 
-        //Revoke the invite after 5 minutes
+        // 5분 후에 초대를 취소합니다
         registerTask(BukkitExecutor.sync(() -> revokeInvite(superiorPlayer), 6000L));
     }
 
@@ -556,11 +556,11 @@ public class SIsland implements Island {
 
         boolean addedNewMember = members.writeAndGet(members -> members.add(superiorPlayer));
 
-        // This player is already a member of the island
+        // 이 플레이어는 이미 섬의 멤버입니다
         if (!addedNewMember)
             return;
 
-        // Remove player from being cooped, invited and its ratings
+        // 플레이어의 협동, 초대 상태 및 평가를 제거합니다
         removeCoop(superiorPlayer);
         revokeInvite(superiorPlayer);
         removeRating(superiorPlayer);
@@ -599,13 +599,13 @@ public class SIsland implements Island {
         boolean removedMember = members.writeAndGet(members -> members.remove(superiorPlayer));
 
         if (!removedMember) {
-            // If the remove method failed, we iterate through all the members and remove the member manually.
-            // Should fix issues if members are not in the correct order.
-            // Reference: https://github.com/BG-Software-LLC/SuperiorSkyblock2/issues/734
+            // remove 메소드가 실패하면, 모든 멤버를 순회하며 수동으로 멤버를 제거합니다.
+            // 멤버가 올바른 순서로 정렬되지 않았을 때 발생하는 문제를 해결해야 합니다.
+            // 참조: https://github.com/BG-Software-LLC/SuperiorSkyblock2/issues/734
             removedMember = members.writeAndGet(members -> members.removeIf(superiorPlayer::equals));
         }
 
-        // This player is not a member of the island.
+        // 이 플레이어는 섬의 멤버가 아닙니다.
         if (!removedMember)
             return;
 
@@ -671,7 +671,7 @@ public class SIsland implements Island {
 
         boolean bannedPlayer = bannedPlayers.add(superiorPlayer);
 
-        // This player is already banned.
+        // 이 플레이어는 이미 추방되었습니다.
         if (!bannedPlayer)
             return;
 
@@ -736,7 +736,7 @@ public class SIsland implements Island {
 
         boolean uncoopPlayer = coopPlayers.remove(superiorPlayer);
 
-        // This player was not coop.
+        // 이 플레이어는 협동 상태가 아니었습니다.
         if (!uncoopPlayer)
             return;
 
@@ -784,7 +784,7 @@ public class SIsland implements Island {
 
         Log.debug(Debug.SET_COOP_LIMIT, owner.getName(), coopLimit);
 
-        // Original and new coop limit are the same
+        // 기존 협동 제한과 새로운 협동 제한이 동일합니다.
         if (coopLimit == getCoopLimitRaw())
             return;
 
@@ -793,7 +793,7 @@ public class SIsland implements Island {
     }
 
     /*
-     *  Location related methods
+     *  위치 관련 메소드
      */
 
     @Override
@@ -1909,21 +1909,21 @@ public class SIsland implements Island {
 
 
         if (cropGrowthEnabled) {
-            // We first collect all the chunks that are currently being ticked
+            // 현재 틱(tick)이 적용되고 있는 모든 청크를 먼저 수집합니다
             oldChunks.setValue(getLoadedChunks(IslandChunkFlags.ONLY_PROTECTED));
         }
 
-        // Changing the size of the island
+        // 섬 크기 변경 중
         this.islandSize.set(islandSize);
 
         if (cropGrowthEnabled) {
-            // We now collect the new chunks after the size was changed
+            // 이제 크기가 변경된 후의 새로운 청크들을 수집합니다
             List<Chunk> newChunks = getLoadedChunks(IslandChunkFlags.ONLY_PROTECTED);
 
             registerTask(BukkitExecutor.ensureMain(() -> {
-                // We stop all old chunks from being ticked.
+                // 모든 오래된 청크의 틱을 중지시킵니다.
                 oldChunks.getValue().forEach(chunk -> plugin.getNMSChunks().startTickingChunk(this, chunk, true));
-                // We start ticking all the new chunks
+                // 모든 새로운 청크의 틱을 시작합니다
                 newChunks.forEach(chunk -> plugin.getNMSChunks().startTickingChunk(this, chunk, false));
             }));
         }
@@ -2260,7 +2260,7 @@ public class SIsland implements Island {
     }
 
     /*
-     *  Bank related methods
+     *  은행 관련 메소드
      */
 
     @Override
@@ -2288,7 +2288,7 @@ public class SIsland implements Island {
             this.bankLimit.set(Value.fixed(bankLimit));
         }
 
-        // Trying to give interest again if the last one failed.
+        // 마지막 이자 지급에 실패한 경우 다시 시도합니다.
         if (hasGiveInterestFailed())
             giveInterest(false);
 
@@ -2318,7 +2318,7 @@ public class SIsland implements Island {
         BigDecimal balance = islandBank.getBalance().max(BigDecimal.ONE);
         BigDecimal balanceToGive = balance.multiply(new BigDecimal(bankInterestPercentage / 100D));
 
-        // If the money that will be given exceeds limit, we want to give money later.
+        // 지급될 금액이 한도를 초과하면, 나중에 지급하도록 합니다.
         if (!islandBank.canDepositMoney(balanceToGive)) {
             Log.debugResult(Debug.GIVE_BANK_INTEREST, "Return Cannot Deposit Money", owner.getName());
             giveInterestFailed = true;
@@ -2371,7 +2371,7 @@ public class SIsland implements Island {
     }
 
     /*
-     *  Worth related methods
+     *  가치 관련 메소드
      */
 
     @Override
@@ -3196,13 +3196,13 @@ public class SIsland implements Island {
 
         int blockLimit = getExactBlockLimit(key);
 
-        //Checking for the specific provided key.
+        // 제공된 특정 키를 확인합니다.
         if (blockLimit >= 0) {
             return getBlockCountAsBigInteger(key).add(BigInteger.valueOf(amount))
                     .compareTo(BigInteger.valueOf(blockLimit)) > 0;
         }
 
-        //Getting the global key values.
+        // 전역 키 값을 가져옵니다.
         key = ((BaseKey<?>) key).toGlobalKey();
         blockLimit = getBlockLimit(key);
 

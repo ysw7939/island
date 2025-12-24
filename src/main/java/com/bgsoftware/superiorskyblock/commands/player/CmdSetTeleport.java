@@ -21,7 +21,7 @@ public class CmdSetTeleport implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("setteleport", "settp", "setgo", "sethome");
+        return Arrays.asList("setteleport", "텔레포트설정", "settp", "setgo", "sethome");
     }
 
     @Override

@@ -19,7 +19,7 @@ public class CmdSetDiscord implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("setdiscord");
+        return java.util.Arrays.asList("setdiscord", "디스코드설정");
     }
 
     @Override

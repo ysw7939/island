@@ -19,7 +19,7 @@ public class CmdDemote implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("demote");
+        return java.util.Arrays.asList("demote", "강등");
     }
 
     @Override

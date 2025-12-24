@@ -20,7 +20,7 @@ public class CmdAdminAddSize implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("addsize");
+        return java.util.Arrays.asList("addsize", "크기추가");
     }
 
     @Override

@@ -22,7 +22,7 @@ public class CmdChest implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("chest", "vault");
+        return Arrays.asList("chest", "상자", "vault");
     }
 
     @Override

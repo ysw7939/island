@@ -14,7 +14,7 @@ import java.util.List;
 public class CmdAdminAddDisbands implements IAdminPlayerCommand {
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("adddisbands", "givedisbands");
+        return Arrays.asList("adddisbands", "해체권한추가", "givedisbands");
     }
 
     @Override

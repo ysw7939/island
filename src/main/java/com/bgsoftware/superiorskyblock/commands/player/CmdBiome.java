@@ -16,7 +16,7 @@ public class CmdBiome implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("biome", "setbiome");
+        return Arrays.asList("biome", "생물군계", "setbiome");
     }
 
     @Override

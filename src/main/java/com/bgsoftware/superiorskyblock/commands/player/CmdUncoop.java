@@ -21,7 +21,7 @@ public class CmdUncoop implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("uncoop", "untrust");
+        return Arrays.asList("uncoop", "협동해제", "untrust");
     }
 
     @Override

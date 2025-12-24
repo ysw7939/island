@@ -20,7 +20,7 @@ public class CmdLeave implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("leave");
+        return java.util.Arrays.asList("leave", "떠나기");
     }
 
     @Override

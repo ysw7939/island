@@ -20,7 +20,7 @@ public class CmdCoop implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("coop", "trust");
+        return Arrays.asList("coop", "협동", "trust");
     }
 
     @Override

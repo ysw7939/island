@@ -23,7 +23,7 @@ public class CmdWarp implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("warp");
+        return java.util.Arrays.asList("warp", "워프");
     }
 
     @Override

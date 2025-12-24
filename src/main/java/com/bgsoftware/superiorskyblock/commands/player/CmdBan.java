@@ -18,7 +18,7 @@ public class CmdBan implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("ban");
+        return java.util.Arrays.asList("ban", "추방");
     }
 
     @Override

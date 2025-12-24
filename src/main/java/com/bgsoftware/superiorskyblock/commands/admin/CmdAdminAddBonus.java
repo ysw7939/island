@@ -25,7 +25,7 @@ public class CmdAdminAddBonus implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("addbonus");
+        return java.util.Arrays.asList("addbonus", "보너스추가");
     }
 
     @Override

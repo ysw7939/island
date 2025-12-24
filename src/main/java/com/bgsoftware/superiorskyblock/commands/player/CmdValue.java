@@ -25,7 +25,7 @@ public class CmdValue implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("value");
+        return java.util.Arrays.asList("value", "가치");
     }
 
     @Override

@@ -16,6 +16,7 @@ import com.bgsoftware.superiorskyblock.player.PlayerLocales;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -36,7 +37,7 @@ public class CmdAdmin implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("admin");
+        return Arrays.asList("admin", "관리");
     }
 
     @Override

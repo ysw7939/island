@@ -14,7 +14,7 @@ public class CmdWarps implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("warps");
+        return java.util.Arrays.asList("warps", "워프목록");
     }
 
     @Override

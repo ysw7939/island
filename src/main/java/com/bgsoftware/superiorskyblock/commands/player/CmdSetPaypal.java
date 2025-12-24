@@ -18,7 +18,7 @@ public class CmdSetPaypal implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("setpaypal");
+        return java.util.Arrays.asList("setpaypal", "페이팔설정");
     }
 
     @Override

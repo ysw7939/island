@@ -19,7 +19,7 @@ public class CmdTransfer implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("transfer", "leader", "leadership");
+        return Arrays.asList("transfer", "양도", "leader", "leadership");
     }
 
     @Override

@@ -17,7 +17,7 @@ public class CmdCoops implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("coops");
+        return java.util.Arrays.asList("coops", "협동목록");
     }
 
     @Override

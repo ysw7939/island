@@ -21,7 +21,7 @@ public class CmdTeamChat implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("teamchat", "chat", "tc");
+        return Arrays.asList("teamchat", "팀채팅", "chat", "tc");
     }
 
     @Override

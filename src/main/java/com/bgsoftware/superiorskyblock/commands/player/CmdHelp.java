@@ -32,7 +32,7 @@ public class CmdHelp implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("help");
+        return java.util.Arrays.asList("help", "도움말");
     }
 
     @Override

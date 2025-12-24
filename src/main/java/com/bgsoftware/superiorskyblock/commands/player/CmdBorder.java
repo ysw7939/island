@@ -18,7 +18,7 @@ public class CmdBorder implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("border");
+        return java.util.Arrays.asList("border", "경계");
     }
 
     @Override

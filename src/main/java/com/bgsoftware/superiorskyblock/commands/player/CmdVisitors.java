@@ -17,7 +17,7 @@ public class CmdVisitors implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("visitors");
+        return java.util.Arrays.asList("visitors", "방문객");
     }
 
     @Override

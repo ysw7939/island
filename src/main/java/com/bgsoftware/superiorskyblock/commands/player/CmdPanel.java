@@ -22,7 +22,7 @@ public class CmdPanel implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("panel", "manager", "cp");
+        return Arrays.asList("panel", "패널", "manager", "cp");
     }
 
     @Override

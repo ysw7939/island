@@ -24,7 +24,7 @@ public class CmdSetWarp implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("setwarp");
+        return java.util.Arrays.asList("setwarp", "워프설정");
     }
 
     @Override

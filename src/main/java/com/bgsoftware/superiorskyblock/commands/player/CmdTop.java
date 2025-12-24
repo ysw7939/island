@@ -15,7 +15,7 @@ public class CmdTop implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("top");
+        return java.util.Arrays.asList("top", "순위");
     }
 
     @Override

@@ -16,7 +16,7 @@ public class CmdRatings implements IPermissibleCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("ratings");
+        return java.util.Arrays.asList("ratings", "평가목록");
     }
 
     @Override
