@@ -19,7 +19,7 @@ public class CmdAdminTitleAll implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("titleall");
+        return java.util.Arrays.asList("titleall", "모두칭호");
     }
 
     @Override

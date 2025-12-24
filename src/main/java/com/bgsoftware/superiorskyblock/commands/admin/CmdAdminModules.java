@@ -19,7 +19,7 @@ public class CmdAdminModules implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("modules");
+        return java.util.Arrays.asList("modules", "모듈");
     }
 
     @Override

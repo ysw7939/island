@@ -17,7 +17,7 @@ public class CmdAdminSetSpawn implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("setspawn");
+        return java.util.Arrays.asList("setspawn", "스폰설정");
     }
 
     @Override

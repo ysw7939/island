@@ -16,7 +16,7 @@ public class CmdAdminRecalc implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("recalc", "recalculate", "level");
+        return Arrays.asList("recalc", "재계산", "recalculate", "level");
     }
 
     @Override

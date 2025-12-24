@@ -28,7 +28,7 @@ public class CmdAdminTitle implements IAdminPlayerCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("title");
+        return java.util.Arrays.asList("title", "칭호");
     }
 
     @Override

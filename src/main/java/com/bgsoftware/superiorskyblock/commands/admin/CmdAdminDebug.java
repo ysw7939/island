@@ -19,7 +19,7 @@ public class CmdAdminDebug implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("debug");
+        return java.util.Arrays.asList("debug", "디버그");
     }
 
     @Override

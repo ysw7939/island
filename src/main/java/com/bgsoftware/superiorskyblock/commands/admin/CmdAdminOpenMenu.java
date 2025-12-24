@@ -20,7 +20,7 @@ public class CmdAdminOpenMenu implements IAdminPlayerCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("openmenu", "menu");
+        return Arrays.asList("openmenu", "메뉴열기", "menu");
     }
 
     @Override

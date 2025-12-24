@@ -20,7 +20,7 @@ public class CmdAdminSetBiome implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("setbiome", "biome");
+        return Arrays.asList("setbiome", "생물군계", "biome");
     }
 
     @Override

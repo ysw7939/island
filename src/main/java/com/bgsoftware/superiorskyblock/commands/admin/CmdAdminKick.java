@@ -17,7 +17,7 @@ public class CmdAdminKick implements IAdminPlayerCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("kick");
+        return java.util.Arrays.asList("kick", "강퇴");
     }
 
     @Override

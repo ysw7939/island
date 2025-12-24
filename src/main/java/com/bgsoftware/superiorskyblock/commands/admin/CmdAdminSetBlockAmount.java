@@ -21,7 +21,7 @@ public class CmdAdminSetBlockAmount implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("setblockamount", "setblocksize");
+        return Arrays.asList("setblockamount", "블록량설정", "setblocksize");
     }
 
     @Override

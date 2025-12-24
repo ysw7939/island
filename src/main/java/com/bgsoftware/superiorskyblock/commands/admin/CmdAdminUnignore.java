@@ -15,7 +15,7 @@ public class CmdAdminUnignore implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("unignore");
+        return java.util.Arrays.asList("unignore", "무시해제");
     }
 
     @Override

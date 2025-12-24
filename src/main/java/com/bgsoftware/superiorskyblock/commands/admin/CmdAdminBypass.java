@@ -14,7 +14,7 @@ public class CmdAdminBypass implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("bypass");
+        return java.util.Arrays.asList("bypass", "우회");
     }
 
     @Override

@@ -17,7 +17,7 @@ public class CmdAdminPurge implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("purge");
+        return java.util.Arrays.asList("purge", "제거");
     }
 
     @Override

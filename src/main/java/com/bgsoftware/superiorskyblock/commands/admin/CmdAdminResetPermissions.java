@@ -16,7 +16,7 @@ public class CmdAdminResetPermissions implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("resetpermissions");
+        return java.util.Arrays.asList("resetpermissions", "권한초기화");
     }
 
     @Override

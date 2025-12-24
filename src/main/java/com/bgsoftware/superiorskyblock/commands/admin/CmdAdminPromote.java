@@ -17,7 +17,7 @@ public class CmdAdminPromote implements IAdminPlayerCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("promote");
+        return java.util.Arrays.asList("promote", "승급");
     }
 
     @Override

@@ -15,7 +15,7 @@ public class CmdAdminReload implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("reload");
+        return java.util.Arrays.asList("reload", "새로고침");
     }
 
     @Override

@@ -20,7 +20,7 @@ public class CmdAdminSetSettings implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("setsettings");
+        return java.util.Arrays.asList("setsettings", "설정설정");
     }
 
     @Override

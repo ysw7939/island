@@ -16,7 +16,7 @@ import java.util.List;
 public class CmdAdminSetLeader implements IAdminPlayerCommand {
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("setleader");
+        return java.util.Arrays.asList("setleader", "리더설정");
     }
 
     @Override

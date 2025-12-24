@@ -16,7 +16,7 @@ public class CmdAdminResetSettings implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("resetsettings");
+        return java.util.Arrays.asList("resetsettings", "설정초기화");
     }
 
     @Override

@@ -40,7 +40,7 @@ public class CmdAdminResetWorld implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("resetworld", "rworld");
+        return Arrays.asList("resetworld", "월드초기화", "rworld");
     }
 
     @Override

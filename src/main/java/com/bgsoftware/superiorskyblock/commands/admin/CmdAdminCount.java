@@ -28,7 +28,7 @@ public class CmdAdminCount implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("count");
+        return java.util.Arrays.asList("count", "개수");
     }
 
     @Override

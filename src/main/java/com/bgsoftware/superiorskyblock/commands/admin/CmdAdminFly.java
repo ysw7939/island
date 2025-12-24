@@ -28,7 +28,7 @@ public class CmdAdminFly implements IAdminPlayerCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("fly");
+        return java.util.Arrays.asList("fly", "비행");
     }
 
     @Override

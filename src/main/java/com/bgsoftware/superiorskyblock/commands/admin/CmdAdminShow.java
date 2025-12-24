@@ -43,7 +43,7 @@ public class CmdAdminShow implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("show", "info");
+        return Arrays.asList("show", "보기", "info");
     }
 
     @Override

@@ -21,7 +21,7 @@ public class CmdAdminSetIslandPreview implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("setislandpreview", "setschematicpreview");
+        return Arrays.asList("setislandpreview", "섬미리보기설정", "setschematicpreview");
     }
 
     @Override

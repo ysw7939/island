@@ -20,7 +20,7 @@ public class CmdAdminSetSize implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("setsize", "setislandsize", "setbordersize");
+        return Arrays.asList("setsize", "크기설정", "setislandsize", "setbordersize");
     }
 
     @Override

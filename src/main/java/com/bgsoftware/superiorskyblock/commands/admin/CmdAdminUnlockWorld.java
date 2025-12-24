@@ -21,7 +21,7 @@ public class CmdAdminUnlockWorld implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("unlockworld", "world", "uworld");
+        return Arrays.asList("unlockworld", "월드잠금해제", "world", "uworld");
     }
 
     @Override

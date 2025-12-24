@@ -22,7 +22,7 @@ public class CmdAdminSetPermission implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("setpermission", "setperm");
+        return Arrays.asList("setpermission", "권한설정", "setperm");
     }
 
     @Override

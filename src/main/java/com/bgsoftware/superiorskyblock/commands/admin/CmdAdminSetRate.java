@@ -20,7 +20,7 @@ import java.util.List;
 public class CmdAdminSetRate implements IAdminIslandCommand {
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("setrate");
+        return java.util.Arrays.asList("setrate", "평가설정");
     }
 
     @Override

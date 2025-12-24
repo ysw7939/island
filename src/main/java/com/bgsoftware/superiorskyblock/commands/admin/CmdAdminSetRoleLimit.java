@@ -23,7 +23,7 @@ public class CmdAdminSetRoleLimit implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("setrolelimit");
+        return java.util.Arrays.asList("setrolelimit", "역할한도설정");
     }
 
     @Override

@@ -20,7 +20,7 @@ public class CmdAdminJoin implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("join");
+        return java.util.Arrays.asList("join", "참가");
     }
 
     @Override

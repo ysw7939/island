@@ -20,7 +20,7 @@ public class CmdAdminSetCoopLimit implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("setcooplimit");
+        return java.util.Arrays.asList("setcooplimit", "협동한도설정");
     }
 
     @Override

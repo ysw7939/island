@@ -16,7 +16,7 @@ public class CmdAdminChest implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("chest");
+        return java.util.Arrays.asList("chest", "상자");
     }
 
     @Override

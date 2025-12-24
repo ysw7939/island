@@ -16,7 +16,7 @@ public class CmdAdminSpawn implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("spawn");
+        return java.util.Arrays.asList("spawn", "스폰");
     }
 
     @Override

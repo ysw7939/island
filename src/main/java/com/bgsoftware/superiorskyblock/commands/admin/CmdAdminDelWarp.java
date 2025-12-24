@@ -20,7 +20,7 @@ public class CmdAdminDelWarp implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("delwarp");
+        return java.util.Arrays.asList("delwarp", "워프삭제");
     }
 
     @Override

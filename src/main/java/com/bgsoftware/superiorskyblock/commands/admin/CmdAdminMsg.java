@@ -24,7 +24,7 @@ public class CmdAdminMsg implements IAdminPlayerCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("msg");
+        return java.util.Arrays.asList("msg", "메시지");
     }
 
     @Override

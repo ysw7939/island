@@ -17,7 +17,7 @@ public class CmdAdminCmdAll implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("cmdall");
+        return java.util.Arrays.asList("cmdall", "모두명령");
     }
 
     @Override

@@ -20,7 +20,7 @@ public class CmdAdminAddTeamLimit implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("addteamlimit");
+        return java.util.Arrays.asList("addteamlimit", "팀한도추가");
     }
 
     @Override

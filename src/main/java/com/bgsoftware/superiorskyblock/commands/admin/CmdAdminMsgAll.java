@@ -16,7 +16,7 @@ public class CmdAdminMsgAll implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("msgall");
+        return java.util.Arrays.asList("msgall", "모두메시지");
     }
 
     @Override

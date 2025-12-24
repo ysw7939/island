@@ -19,7 +19,7 @@ import java.util.List;
 public class CmdAdminSetWarpsLimit implements IAdminIslandCommand {
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("setwarpslimit");
+        return java.util.Arrays.asList("setwarpslimit", "워프한도설정");
     }
 
     @Override

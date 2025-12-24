@@ -30,7 +30,7 @@ public class CmdAdminSyncBonus implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("syncbonus");
+        return java.util.Arrays.asList("syncbonus", "보너스동기화");
     }
 
     @Override

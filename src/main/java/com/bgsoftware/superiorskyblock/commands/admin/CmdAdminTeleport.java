@@ -35,7 +35,7 @@ public class CmdAdminTeleport implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("tp", "teleport", "go", "visit");
+        return Arrays.asList("tp", "teleport", "텔레포트", "go", "visit");
     }
 
     @Override

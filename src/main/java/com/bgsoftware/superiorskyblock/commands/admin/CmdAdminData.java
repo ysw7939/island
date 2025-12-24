@@ -31,7 +31,7 @@ public class CmdAdminData implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("data");
+        return java.util.Arrays.asList("data", "데이터");
     }
 
     @Override

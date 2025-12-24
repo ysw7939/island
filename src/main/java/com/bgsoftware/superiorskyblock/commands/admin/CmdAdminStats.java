@@ -13,7 +13,7 @@ public class CmdAdminStats implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("stats");
+        return java.util.Arrays.asList("stats", "통계");
     }
 
     @Override

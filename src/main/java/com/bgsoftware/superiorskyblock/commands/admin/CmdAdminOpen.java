@@ -18,7 +18,7 @@ public class CmdAdminOpen implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("open", "unlock");
+        return Arrays.asList("open", "열기", "unlock");
     }
 
     @Override

@@ -14,7 +14,7 @@ public class CmdAdminSpy implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("spy");
+        return java.util.Arrays.asList("spy", "감시");
     }
 
     @Override

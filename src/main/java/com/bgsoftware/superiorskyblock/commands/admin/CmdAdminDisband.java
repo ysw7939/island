@@ -20,7 +20,7 @@ public class CmdAdminDisband implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("disband");
+        return java.util.Arrays.asList("disband", "해체");
     }
 
     @Override

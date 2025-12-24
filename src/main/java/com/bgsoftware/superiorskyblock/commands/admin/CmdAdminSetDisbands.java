@@ -14,7 +14,7 @@ import java.util.List;
 public class CmdAdminSetDisbands implements IAdminPlayerCommand {
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("setdisbands");
+        return java.util.Arrays.asList("setdisbands", "해체권한설정");
     }
 
     @Override

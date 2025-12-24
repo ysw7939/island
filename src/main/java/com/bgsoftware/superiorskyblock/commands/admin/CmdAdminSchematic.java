@@ -15,7 +15,7 @@ public class CmdAdminSchematic implements ISuperiorCommand {
 
     @Override
     public List<String> getAliases() {
-        return Arrays.asList("schematic", "schem");
+        return Arrays.asList("schematic", "회로", "schem");
     }
 
     @Override

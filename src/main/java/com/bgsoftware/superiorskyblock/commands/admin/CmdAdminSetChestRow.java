@@ -19,7 +19,7 @@ public class CmdAdminSetChestRow implements IAdminIslandCommand {
 
     @Override
     public List<String> getAliases() {
-        return Collections.singletonList("setchestrow");
+        return java.util.Arrays.asList("setchestrow", "상자행설정");
     }
 
     @Override
