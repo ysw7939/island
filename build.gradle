@@ -63,7 +63,6 @@ repositories {
 }
 
 dependencies {
-    implementation fileTree(rootProject.archiveFolder.getAbsolutePath())
     implementation project(":API")
 
     implementation 'com.bgsoftware.common.config:CommentedConfiguration:b1'
@@ -82,14 +81,6 @@ dependencies {
     compileOnly 'org.spigotmc:v1_16_R3-Tuinity:latest'
 }
 
-jar {
-    from {
-        for (File file : rootProject.archiveFolder.listFiles()) {
-            zipTree(file)
-        }
-    }
-}
-
 processResources {
     outputs.upToDateWhen { false }
     eachFile { details ->
@@ -102,8 +93,6 @@ processResources {
 }
 
 shadowJar {
-    dependsOn(jar)
-
     relocate 'org.bstats', 'com.bgsoftware.superiorskyblock.libs.org.bstats'
     relocate 'com.bgsoftware.common', 'com.bgsoftware.superiorskyblock.libs.com.bgsoftware.common'
 
