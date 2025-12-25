@@ -104,6 +104,7 @@ shadowJar {
 
     destinationDirectory = rootProject.targetFolder
     from sourceSets.getByName("main").output
+    from project(':API').sourceSets.main.output
     configurations = [project.configurations.getByName("runtimeClasspath")]
 }
 
